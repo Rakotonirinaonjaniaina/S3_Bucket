@@ -1,0 +1,12 @@
+Resources:
+  MyS3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: std21015
+
+  MyBucketARNSSMParameter:
+    Type: AWS::SSM::Parameter
+    Properties:
+      Type: String
+      Name: /MyBucket/ARN
+      Value: MyS3Bucket
